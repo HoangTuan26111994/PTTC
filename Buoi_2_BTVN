@@ -1,0 +1,31 @@
+class PTTC1():
+  def nhaphocvien(self):
+        self.ten=input("Nhap ten")
+        self.tuoi=input("Nhap tuoi")
+        self.quequan=input("Nhap que quan")
+        self.lop=input("Nhap lop")
+        self.diemanh=float(input("Diem anh"))
+        self.diemtin=float(input("Diem tin"))
+  def hocvien(self):
+    HV=[]
+    HV.append(self.ten)
+    HV.append(self.tuoi)
+    HV.append(self.quequan)
+    HV.append(self.lop)
+    HV.append(self.diemanh)
+    HV.append(self.diemtin)
+    return HV
+soluong=int(input("Nhap so luong hoc vien:"))
+sv=[]
+for i in range (soluong):
+
+  print("Nhap sinh vien thu ",i)
+  a=PTTC1()
+  a.nhaphocvien()
+  sv.append(a.hocvien())
+#print (sv)
+
+print("{:<18} {:<8} {:<8} {:<8} {:<8} {:<8}".format("Ten", "Tuoi", "Quequan", "lop", "diemanh", "diemtin"))
+
+for i in range (len(sv)):
+    print("{:<18} {:<8} {:<8} {:<8} {:<8} {:<8}".format(sv[i][0], sv[i][1], sv[i][2], sv[i][3], sv[i][4], sv[i][5]))
